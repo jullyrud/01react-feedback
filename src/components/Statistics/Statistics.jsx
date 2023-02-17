@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 
 export function Statistics({ good, neutral, bad, total, positivePercentage }) {
         return (
@@ -11,3 +12,11 @@ export function Statistics({ good, neutral, bad, total, positivePercentage }) {
         </>
     )
     } 
+
+Statistics.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    positivePercentage: PropTypes.number,
+    }

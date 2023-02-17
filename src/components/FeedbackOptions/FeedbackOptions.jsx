@@ -1,4 +1,6 @@
-export function FeedbackOptions({options, onHandleClick} ){
+import PropTypes from 'prop-types'
+
+export function FeedbackOptions({ options, onHandleClick }) {
     return (
         <div>
             <h2>Please leave feedback</h2> 
@@ -6,7 +8,10 @@ export function FeedbackOptions({options, onHandleClick} ){
                 <button onClick={() => onHandleClick(option)} type="button" key={ind} >{option}</button>
             ))}
         </div>
-      
-        )
+            )
     
+}
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string)
 }
